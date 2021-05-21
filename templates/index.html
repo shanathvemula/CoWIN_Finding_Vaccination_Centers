@@ -36,13 +36,12 @@
         .img{
             border-radius: 20%;
             float: left;
-            border: darkgrey 3px groove;
         }
     </style>
 </head>
 <body bgcolor="#f0ffff" >
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"  style="background-color: #e3f2fd;">
-    <img src="{% static 'img/india2.png' %}" class="img" height="200" width="200">
+    <img src="{% static 'img/1india.png' %}" class="img" height="200" width="200">
     <form action="/index/" >
         <div>Enter Pincode: <input class="form-control mr-sm-2" type="number"  aria-label="Enter pincode here" name="pin" min="100000" max="999999"required><br>
             Enter Date:<input class="form-control mr-sm-2" type="date" name="date" required><br>
@@ -90,6 +89,9 @@ function normalImg(x) {
 </script>
 <footer>
     <img src="{% static 'img/1.jpg' %}" alt="Paris" width="1325" height="300">
+    <div class="footer-copyright" align="center">
+        <span>© Designed by <strong>Vemula Shanath Kumar</strong></span>
+    </div>
 </footer>
 </body>
 </html>
