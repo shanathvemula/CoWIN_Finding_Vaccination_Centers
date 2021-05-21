@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reger.html</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static 'css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}"/>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        nav{
+            background-color: #FFFFFF;
+            text-align: left;
+            font-family: 'Times New Roman';
+        }
+        .img{
+            border-radius: 20%;
+            float: left;
+            border: darkgrey 3px groove;
+        }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"  style="background-color: #e3f2fd;">
+    <img src="{% static 'img/india2.png' %}" class="img" height="100" width="100">
+</nav>
+<div>
+    <img src="{% static 'img/2.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/3.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/4.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/5.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/6.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/7.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/8.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/9.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/10.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/11.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/12.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/13.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <img src="{% static 'img/14.jpg' %}" width="90%" alt="Paris" class="center"><br><br>
+    <a href="https://selfregistration.cowin.gov.in/"><input type="submit" value="continue"></a><br><br>
+</div>
+<footer>
+    <img src="{% static 'img/1.jpg' %}" alt="Paris" width="1325" height="300">
+</footer>
+</body>
+</html>

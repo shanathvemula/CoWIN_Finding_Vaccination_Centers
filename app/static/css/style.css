@@ -1,0 +1,249 @@
+body{
+    padding:0;
+    margin:0;
+    background:#fff;
+    position:relative;
+    font-family: 'Raleway', sans-serif;
+
+}
+body a{
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+a:hover {
+    text-decoration: none;
+}
+.navbar-header h1 img{
+    margin-right: 0.3em;
+}
+.navbar-header h1 a{
+    color:#fff;
+    text-decoration: none;
+    font-size:1.2em;
+    display:block ;
+    padding: 10px;
+    font-weight:600;
+}
+.nav-header h1 a span{
+    font-size:1em;
+    letter-spacing: 0px;
+    padding:0.2em;
+}
+.navbar-right {
+    float: right!important;
+    margin-right:0px!important;
+    margin-top: .5em;
+}
+.navbar-collapse {
+    padding: 0 !important;
+}
+.navbar-default{
+    background: #0AAB8A;
+    padding-bottom: 10px;
+    transition: 0.2s;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li >a  {
+    color: #fff;
+    font-size: 16px;
+
+}
+.navbar-default .navbar-nav > li >a:last-child{
+    margin-left: 10px;
+}
+.navbar-default .navbar-nav >li > a:hover{
+    color: #F7CA18;
+    font-size:16px;
+    transition:0.2s;
+
+}
+.navbar{
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo{
+    position:absolute;
+    margin-top: -36px !important;
+}
+
+.main_image{
+    padding:0px;
+    margin-top: 60px;
+}
+.dot_png {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    opacity: 0.5;
+
+}
+.What_we_Are{
+
+
+    padding-bottom: 20px;
+}
+.What_we_Are h1:hover{
+    color: #f2b42e;
+
+}
+.Ourservices_Char{
+    color:white;
+}
+.Ourservices_panels_back{
+    background: #9d9d9d;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.Ourservices_company {
+    margin: 0 auto;
+    width: 700px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+.timeline-border {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 5px solid #dadada;
+    height: 100%;
+}
+.Ourservices {
+    width: 700px;
+    float: right;
+    text-align: left;
+    margin: 0 0 10px;
+    padding: 10px 0 0 405px;
+    position: relative;
+}
+.Ourservices.even {
+    float: left;
+    text-align: right;
+    padding: 10px 405px 0 0;
+}
+.Ourservices h5 {
+    color: #3f8dbf
+}
+.Ourservices .icon-border {
+    position: relative;
+    margin-left: 10px;
+}
+.Ourservices.even .icon-border {
+    margin-right: 10px
+}
+.Ourservices .icon-border:before {
+    content: "";
+    display: block;
+    width: 65px;
+    border-bottom: 1px solid #dadada;
+    position: absolute;
+    top: 35px;
+    left: -65px;
+}
+.Ourservices.even .icon-border:before {
+    left: auto;
+    right: -65px;
+}
+.icon-border {
+    display: inline-block
+}
+.icon-border i {
+
+    text-align: center;
+    color: #3f8dbf;
+    padding: 0;
+    margin: 0 0 10px 0;
+    display: table;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #3f8dbf;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+.Ourservices:hover .icon-border i {
+    background-color: #3f8dbf;
+    color: #FFF;
+}
+.icon-border i:before {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.dark-wrapper {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e3e3e3;
+}
+.inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.container:after {
+    clear: both;
+}
+.dark-wrapper {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e3e3e3;
+}
+.bm20 {
+    margin-bottom: 20px !important
+}
+.thin {
+    width: 80%;
+    margin: 0 auto;
+}
+.divide30 {
+    width: 100%;
+    height: 30px;
+}
+.section-title h2 {
+    font-weight: 800;
+    text-transform: lowercase;
+    font-size: 25px;
+    color: #b6b6b6;
+}
+.lead {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 767px){
+    .Ourservices_company {
+        width: 100%;
+    }
+    .Ourservices_company {
+        width: 100%
+    }
+    .timeline-border {
+        display: none
+    }
+    .Ourservices {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin: 0 0 30px;
+        padding: 0;
+        position: relative;
+    }
+    .Ourservices.even {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+    .Ourservices .icon-border:before,
+    .Ourservices .icon-border:after {
+        display: none
+    }
+
+}

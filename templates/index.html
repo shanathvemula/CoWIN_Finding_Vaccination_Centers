@@ -1,0 +1,95 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Finding Vaccination Centers</title>
+    <meta charset="UTF-8">
+    <title>pie chart</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static 'css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}"/>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <style>
+        .navbar{
+            padding: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        form {
+            margin: 0 auto;
+            width:250px;
+        }
+        body{
+            font-family: 'Indie Flower', cursive;
+            font-size: 20px;
+        }
+        nav{
+            background-color: #FFFFFF;
+            text-align: left;
+            font-family: 'Times New Roman';
+        }
+        .img{
+            border-radius: 20%;
+            float: left;
+            border: darkgrey 3px groove;
+        }
+    </style>
+</head>
+<body bgcolor="#f0ffff" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"  style="background-color: #e3f2fd;">
+    <img src="{% static 'img/india2.png' %}" class="img" height="200" width="200">
+    <form action="/index/" >
+        <div>Enter Pincode: <input class="form-control mr-sm-2" type="number"  aria-label="Enter pincode here" name="pin" min="100000" max="999999"required><br>
+            Enter Date:<input class="form-control mr-sm-2" type="date" name="date" required><br>
+            <input type="submit" value="submit"></div>
+    </form>
+</nav>
+{% if rjson %}
+    {% if rjson.centers %}
+        {% for center in rjson.centers %}
+            {% for session in center.sessions %}
+                <div class="container p-3 my-3 bg-primary text-white rounded" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <p>Pincode: {{ center.pincode }}</p>
+                    <p>Available on :{{ session.date }}</p>
+                    <p>Center Name :{{ center.name }}</p>
+                    <p>Block_name Name :{{ center.block_name }}</p>
+                    <p>Availablity : {{ session.available_capacity }}</p>
+                    <p>available capacity dose1 : {{ session.available_capacity_dose1 }}</p>
+                    <p>available capacity dose2 : {{ session.available_capacity_dose2 }}</p>
+                    <p>Vaccine Fee Type : {{ center.fee_type }}</p>
+                    {% if session.vaccine != '' %}
+                        <p>Vaccine Name : {{ session.vaccine }}</p>
+                    {% endif %}
+                </div><br><br>
+            {% endfor %}
+        {% endfor %}̥
+        <form action="/reg/" align="left">
+            <input type="submit" value="Register">
+        </form>
+    {% else %}
+        <h1>No Vaccination slot avaliable...</h1><br><br><br><br><br><br><br><br><br>
+    {% endif %}
+{% else %}
+    <h1>No record fonud...</h1><br><br><br><br><br><br><br><br><br>
+{% endif %}
+<script>
+function bigImg(x) {
+  x.style.height = "90%";
+  x.style.width = "90%";
+}
+
+function normalImg(x) {
+  x.style.height = "85%";
+  x.style.width = "85%";
+}
+</script>
+<footer>
+    <img src="{% static 'img/1.jpg' %}" alt="Paris" width="1325" height="300">
+</footer>
+</body>
+</html>
